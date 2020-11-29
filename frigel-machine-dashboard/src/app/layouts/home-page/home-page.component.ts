@@ -11,7 +11,7 @@ import { ParentErrorStateMatcher } from 'src/app/validators';
 export class HomePageComponent implements OnInit {
 
   sideBarOpen = true;
-  userDetailsForm: FormGroup;
+  inputValueForm: FormGroup;
   toggleName = 'MACHINE ON';
   showForm = false;
 
@@ -35,8 +35,12 @@ export class HomePageComponent implements OnInit {
 
   onChange(event: MatSlideToggleChange) {
     if (event.checked === false) {
-    this.userDetailsForm.get('value').setValue(1);
-    this.toggleName = 'MACHINE ON';
+    this.toggleName = 'MACHINE OFF';
+    // when machine is off disabling dashboard and enabling the form
+    setTimeout(() => {
+      this.inputValueForm.get('value').setValue(1);
+    }, 2000);
+
     } else {
       this.toggleName = 'MACHINE ON';
     }
@@ -44,13 +48,9 @@ export class HomePageComponent implements OnInit {
   sideBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
   }
-  change(event) {
-    console.log(this.userDetailsForm.get('value').value);
-  }
-
   createForms() {
-    // user details form validations
-    this.userDetailsForm = this.fb.group({
+    // input value form validations
+    this.inputValueForm = this.fb.group({
       value: ['', [Validators.max(15), Validators.min(10), Validators.required] ],
     });
   }

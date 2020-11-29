@@ -13,7 +13,6 @@ export class ParentErrorStateMatcher implements ErrorStateMatcher {
 }
 
 export class PasswordValidator {
-  // Inspired on: http://plnkr.co/edit/Zcbg2T3tOxYmhxs7vaAm?p=preview
   static areEqual(formGroup: FormGroup) {
     let value;
     let valid = true;
