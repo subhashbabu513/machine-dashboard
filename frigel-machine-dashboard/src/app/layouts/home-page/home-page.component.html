@@ -1,0 +1,41 @@
+<div class="container">
+ <div class="row" *ngIf="userDetailsForm.get('value').value <=9 || userDetailsForm.get('value').value >= 16">
+      <div class="col-2">
+        <div class="user-details-container">
+          <img class="user-image" src="https://randomuser.me/api/portraits/lego/3.jpg"/>
+        </div>
+      </div>
+  
+      <div style="margin-left:30vw">
+        <h2 class="section-title">Value Form</h2>
+        <form [formGroup]="userDetailsForm">
+          <mat-form-field  style="width:50vw">
+            <input matInput placeholder="Enter Value in the range between 10 to 15"  min="10" max="15"formControlName="value" required>
+            <mat-error *ngFor="let validation of validationMessages.value">
+              <mat-error class="error-message" *ngIf="userDetailsForm.get('value').hasError(validation.type) && (userDetailsForm.get('value').dirty || userDetailsForm.get('value').touched)">{{validation.message}}</mat-error>
+            </mat-error>
+          </mat-form-field>
+  
+        </form>
+      </div>
+    </div>
+
+    
+    <div class="row" *ngIf="userDetailsForm.get('value').value >= 10 && userDetailsForm.get('value').value <= 15">
+        
+       <div class="toggle"><mat-slide-toggle (change)="onChange($event)" checked ="true"> {{toggleName}}</mat-slide-toggle></div> 
+<br>
+        <app-header (toggleSideBarForMe)="sideBarToggler($event)"></app-header>
+
+        <mat-drawer-container>
+            <mat-drawer mode="side" [opened]="sideBarOpen">
+                <app-sidebar></app-sidebar>
+            </mat-drawer>
+            <mat-drawer-content>
+                <router-outlet></router-outlet>
+            </mat-drawer-content>
+        </mat-drawer-container>
+    </div>
+
+  </div>
+  
