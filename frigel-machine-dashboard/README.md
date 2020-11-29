@@ -3,6 +3,15 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.4.
 
 # Demo 
+Input Value Form
+
+![image](https://github.com/subhashbabu513/machine-dashboard/blob/master/frigel-machine-dashboard/src/environments/f1.png)
+
+When User insert wrong input value
+
+![image](https://github.com/subhashbabu513/machine-dashboard/blob/master/frigel-machine-dashboard/src/environments/form.png)
+
+When user insert value in the range displays Machibe Dashboard
 
 ![image](https://github.com/subhashbabu513/machine-dashboard/blob/master/frigel-machine-dashboard/src/dashboard-image.png)
 
