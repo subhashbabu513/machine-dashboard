@@ -11,7 +11,7 @@ When User insert wrong input value
 
 ![image](https://github.com/subhashbabu513/machine-dashboard/blob/master/frigel-machine-dashboard/src/environments/form.png)
 
-When user insert value in the range displays Machibe Dashboard
+When user insert value in the range, displaying Machine Dashboard
 
 ![image](https://github.com/subhashbabu513/machine-dashboard/blob/master/frigel-machine-dashboard/src/dashboard-image.png)
 
