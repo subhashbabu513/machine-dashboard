@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Demo 
 
+![image](https://github.com/subhashbabu513/machine-dashboard/blob/master/frigel-machine-dashboard/src/dashboard-image.png)
+
 
 ## Development server
 
